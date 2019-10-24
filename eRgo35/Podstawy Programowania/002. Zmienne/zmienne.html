@@ -1,0 +1,11 @@
+<script>
+  var firstname = prompt("Podaj swoje imię: ");
+  var lastname = prompt("Podaj swoje nazwisko: ");
+  var age = prompt("Podaj swój wiek: ");
+  document.write(`<h1>Nazywam się ${firstname} ${lastname} i mam ${age} lat.</h1>`);
+  setTimeout(() => {
+    firstname = "Joe";
+    lastname = "Doe";
+    console.log(`${firstname} ${lastname}`);
+  }, 3000);
+</script>
