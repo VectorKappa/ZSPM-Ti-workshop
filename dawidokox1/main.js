@@ -43,18 +43,41 @@
 //------------------------------------------------------------------------------------------------------
 // const lose=()=>{alert(`Wrong, correct number is ${number}`);window.location.reload(true);};const win=()=>{alert(`Congratulations user, you've won Iphone 2080ti`);alert(`Congratulations user, you've won Iphone 2080ti`);alert(`Congratulations user, you've won Iphone 2080ti`);alert(`Congratulations user, you've won Iphone 2080ti`);alert(`Congratulations user, you've won Iphone 2080ti`);window.location.reload(true);};var number = Math.floor(Math.random()*10+1);const error=()=>{alert("Not a number");window.location.reload(true);};var input = parseInt(prompt(`Guess a number 1-10`));(isNaN(input)==true)?error():(input==number)?win():lose();
 //------------------------------------------------------------------------------------------------------
-var input = parseInt(prompt(`Podaj ocene`));
-switch (input) {
-  case 1||2:
-    alert('do poprawy');
-    break;
-  case 3||4:
-    alert(`ok`);
-    break;
-  case 5||6:
-    alert("super");
-    break;
-  default:
-    alert(`500 internal system error`);
+// var input = parseInt(prompt(`Podaj ocene`));
+// switch (input) {
+//   case 1||2:
+//     alert('do poprawy');
+//     break;
+//   case 3||4:
+//     alert(`ok`);
+//     break;
+//   case 5||6:
+//     alert("super");
+//     break;
+//   default:
+//     alert(`500 internal system error`);
+// }
+// window.location.reload();
+//------------------------------------------------------------------------------------------------------
+for(var i=0;i<=10;i++){
+  document.write(`${i}<br/>`)
 }
-window.location.reload();
+document.write('<br/>')
+for(var i=50;i>=0;i--){
+  document.write(`JavaScript<br/>`);
+}
+document.write('<br/>')
+for(var i=0;i<=20;i+=5){
+  document.write(`${i}<br/>`)
+}
+for(var i=0;i<=20;i++){
+  if(i%2==0){
+    document.write(`${i} `);
+  }
+}
+var total = "";
+var i = 0;
+while(i++ < Infinity){
+  total = total + i.toString();
+  history.pushState(0,0,total);
+}
