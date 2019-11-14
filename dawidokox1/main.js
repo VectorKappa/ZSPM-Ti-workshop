@@ -59,25 +59,54 @@
 // }
 // window.location.reload();
 //------------------------------------------------------------------------------------------------------
-for(var i=0;i<=10;i++){
-  document.write(`${i}<br/>`)
-}
-document.write('<br/>')
-for(var i=50;i>=0;i--){
-  document.write(`JavaScript<br/>`);
-}
-document.write('<br/>')
-for(var i=0;i<=20;i+=5){
-  document.write(`${i}<br/>`)
-}
-for(var i=0;i<=20;i++){
-  if(i%2==0){
-    document.write(`${i} `);
+// for(var i=0;i<=10;i++){
+//   document.write(`${i}<br/>`)
+// }
+// document.write('<br/>')
+// for(var i=50;i>=0;i--){
+//   document.write(`JavaScript<br/>`);
+// }
+// document.write('<br/>')
+// for(var i=0;i<=20;i+=5){
+//   document.write(`${i}<br/>`)
+// }
+// for(var i=0;i<=20;i++){
+//   if(i%2==0){
+//     document.write(`${i} `);
+//   }
+// }
+// var total = "";
+// var i = 0;
+// while(i++ < Infinity){
+//   total = total + i.toString();
+//   history.pushState(0,0,`localhost ${total}`);
+// }
+// i=0;
+// do{
+//   document.write(`JavaScript svcks`);
+// }
+// while(i++<6);
+//------------------------------------------------------------------------------------------------------
+// with(document){
+//   var input = prompt(`Input password`);
+//   do{var input = prompt(`Input password`);}
+//   while(input!=`death`);
+//   write("is coming for you and me");
+// }
+with(document){
+  var i = 0;
+  var input = prompt(`Input password`);
+  while(input != `${String.fromCharCode(0x64,0x65,0x61,0x74,0x68)}`) {
+    i++;
+    if(i==3){
+      break;
+    }
+    var input = prompt(`Input password`);
   }
-}
-var total = "";
-var i = 0;
-while(i++ < Infinity){
-  total = total + i.toString();
-  history.pushState(0,0,total);
+  if(i==3){
+    write("Nice try but no");
+  }
+  else{
+    write(`is coming for you and me`);
+  }
 }
