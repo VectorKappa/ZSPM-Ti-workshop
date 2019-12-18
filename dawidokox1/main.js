@@ -1,3 +1,4 @@
+with(document){
 // with(document){
 //   var name =prompt("First name pls");
 //   var lastName=prompt("Last name pls");
@@ -64,49 +65,71 @@
 // }
 // document.write('<br/>')
 // for(var i=50;i>=0;i--){
-//   document.write(`JavaScript<br/>`);
+//   document.write(`${i}<br/>`);
 // }
-// document.write('<br/>')
-// for(var i=0;i<=20;i+=5){
-//   document.write(`${i}<br/>`)
+//-------------------------------------------------------------------------------------------------------
+// const hello=()=>{
+//   alert("Hello there");
 // }
-// for(var i=0;i<=20;i++){
-//   if(i%2==0){
-//     document.write(`${i} `);
+// const multiply=(a,b)=>{
+//   var guess= parseInt(prompt(`Podaj wynik ${a}*${b}`));
+//   if(guess == a*b){
+//     alert("git good");
 //   }
+//   else{alert("nope");while(true){document.write("nope<br>")}}
 // }
-// var total = "";
-// var i = 0;
-// while(i++ < Infinity){
-//   total = total + i.toString();
-//   history.pushState(0,0,`localhost ${total}`);
+// var a = parseInt(prompt("Podaj a"));
+// var b = parseInt(prompt("Podaj b"));
+// multiply(a,b);
+//--------------------------------------------------------------------------------------------------------
+// var a = Math.floor(Math.random()*20);
+// var b = Math.floor(Math.random()*20);
+// var int = setTimeout(() => {
+//   while(true){document.write("You lose <br>")}
+// },5000);
+// var guess = parseInt(prompt(`Podaj wynik ${a} * ${b}, Masz 5 sec`));
+// if(guess == a*b){
+//   clearTimeout(int);
+//   alert("Good");
+//   setTimeout(()=>{window.location.reload()},(Math.floor(Math.random()*20+1)*1000);
 // }
-// i=0;
-// do{
-//   document.write(`JavaScript svcks`);
+// else{
+//   alert("rip");
 // }
-// while(i++<6);
-//------------------------------------------------------------------------------------------------------
-// with(document){
-//   var input = prompt(`Input password`);
-//   do{var input = prompt(`Input password`);}
-//   while(input!=`death`);
-//   write("is coming for you and me");
+// const hello=()=>{
+//   while(True){alert("rip")}
 // }
-with(document){
-  var i = 0;
-  var input = prompt(`Input password`);
-  while(input != `${String.fromCharCode(0x64,0x65,0x61,0x74,0x68)}`) {
-    i++;
-    if(i==3){
-      break;
-    }
-    var input = prompt(`Input password`);
-  }
-  if(i==3){
-    write("Nice try but no");
-  }
-  else{
-    write(`is coming for you and me`);
-  }
+//---------------------------------------------------------------------------------------------------------
+// date = new Date();
+// var patt = new RegExp("[0-9]{2}:[0-9]{2}:[0-9]{2}");
+// document.write(`Dzisiaj mamy ${new Date()}<br>`);
+// write(`Data GMT ${date.toGMTString()}<br>`);
+// write(`Data lokalna ${date.toLocaleString()}<br>`);
+// write(`Dzien miesiaca ${date.getDate()}<br>`);
+// write(`Dzien tygodnia ${date.getDay()}<br>`);
+// write(`Miesiac ${date.getMonth()+1}<br>`);
+// write(`Rok ${date.getFullYear()}<br>`);
+// write(`Godzina ${date.getHours()}<br>`);
+// write(`Minuty ${date.getMinutes()}<br>`);
+// write(`Sekundy ${date.getSeconds()}<br>`);
+// write(`Aktualna godzina ${patt.exec(date.toLocaleString())}<br><br>`);
+//
+//
+// write(`Adres url: ${document.location}<br>`);
+// write(`title: ${document.title}<br>`);
+//---------------------------------------------------------------------------------------------------------
+var sec = document.getElementById('seconds');
+var min = document.getElementById('minutes');
+var hr = document.getElementById('hours');
+var date = new Date();
+sec.innerText = date.getSeconds();
+min.innerText = date.getMinutes();
+hr.innerText = date.getHours();
+setInterval(()=>{date = new Date();
+(date.getSeconds()<10)?sec.innerText = `0${date.getSeconds()}`:sec.innerText = date.getSeconds();
+(date.getMinutes() < 10)?min.innerText = `0${date.getMinutes()}`:min.innerText = date.getMinutes();
+(date.getHours() < 10)?hr.innerText = `0${date.getHours()}`:hr.innerText = date.getHours();
+}, 1000);
+//---------------------------------------------------------------------------------------------------------
+
 }
