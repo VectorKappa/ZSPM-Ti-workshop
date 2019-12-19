@@ -118,18 +118,24 @@ with(document){
 // write(`Adres url: ${document.location}<br>`);
 // write(`title: ${document.title}<br>`);
 //---------------------------------------------------------------------------------------------------------
-var sec = document.getElementById('seconds');
-var min = document.getElementById('minutes');
-var hr = document.getElementById('hours');
-var date = new Date();
-sec.innerText = date.getSeconds();
-min.innerText = date.getMinutes();
-hr.innerText = date.getHours();
-setInterval(()=>{date = new Date();
-(date.getSeconds()<10)?sec.innerText = `0${date.getSeconds()}`:sec.innerText = date.getSeconds();
-(date.getMinutes() < 10)?min.innerText = `0${date.getMinutes()}`:min.innerText = date.getMinutes();
-(date.getHours() < 10)?hr.innerText = `0${date.getHours()}`:hr.innerText = date.getHours();
-}, 1000);
+// var sec = document.getElementById('seconds');
+// var min = document.getElementById('minutes');
+// var hr = document.getElementById('hours');
+// var date = new Date();
+// sec.innerText = date.getSeconds();
+// min.innerText = date.getMinutes();
+// hr.innerText = date.getHours();
+// setInterval(()=>{date = new Date();
+// (date.getSeconds()<10)?sec.innerText = `0${date.getSeconds()}`:sec.innerText = date.getSeconds();
+// (date.getMinutes() < 10)?min.innerText = `0${date.getMinutes()}`:min.innerText = date.getMinutes();
+// (date.getHours() < 10)?hr.innerText = `0${date.getHours()}`:hr.innerText = date.getHours();
+// }, 1000);
 //---------------------------------------------------------------------------------------------------------
-
+var arr = ["name1","name2","name3"];
+arr.push("name4");
+arr.push("name5");
+write(`Pierwszym elementem jest ${arr[0]}`);
+var arr1 = new Array(1,3,5,7);
+write(`arr1: ${arr1}`);
+write(`arr1.pop(): ${arr1.pop()}`);
 }
