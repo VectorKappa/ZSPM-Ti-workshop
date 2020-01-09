@@ -131,11 +131,18 @@ with(document){
 // (date.getHours() < 10)?hr.innerText = `0${date.getHours()}`:hr.innerText = date.getHours();
 // }, 1000);
 //---------------------------------------------------------------------------------------------------------
-var arr = ["name1","name2","name3"];
-arr.push("name4");
-arr.push("name5");
-write(`Pierwszym elementem jest ${arr[0]}`);
-var arr1 = new Array(1,3,5,7);
-write(`arr1: ${arr1}`);
-write(`arr1.pop(): ${arr1.pop()}`);
+// var arr = ["name1","name2","name3"];
+// arr.push("name4");
+// arr.push("name5");
+// write(`Pierwszym elementem jest ${arr[0]}<br>`);
+// var arr1 = new Array(1,3,5,7);
+// write(`arr1: ${arr1}<br>`);
+// write(`arr1.pop(): ${arr1.pop()}`);
+//----------------------------------------------------------------------------------------------------------
+var mies = ["Styczeń","Luty","Marzec","Kwiecień","Maj","Czerwiec","Lipiec","Sierpień","Wrzesień","Październik","Listopad","Grudzień"];
+var dtyg = ["Poniedziałek","Wtorek","Środa","Czwartek","Piątek","Sobota","Niedziela"];
+let date = new Date();
+var ndtyg = date.getDay()-1;
+var nmies = date.getMonth();
+write(`Dzisiejsza data to: ${dtyg[ndtyg]}, ${date.getDate()} ${mies[nmies]}, ${date.getFullYear()}`);
 }
