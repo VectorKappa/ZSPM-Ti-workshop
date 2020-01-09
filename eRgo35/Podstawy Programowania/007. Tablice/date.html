@@ -1,0 +1,6 @@
+<script>
+    var days = ['poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota', 'niedziela'];
+    var months = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrześień', 'paździenik', 'listopad', 'grudzień'];
+    var current_date = new Date;
+    document.write(days[current_date.getDay() + 1] + ', ' + current_date.getDate() + ' ' + months[current_date.getMonth()] + ' ' + current_date.getFullYear());
+</script>
