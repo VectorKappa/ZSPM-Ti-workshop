@@ -1,4 +1,15 @@
 with(document){
+    Math["nthRoot"]=function nthroot(x, n) {
+        try {
+          var negate = n % 2 == 1 && x < 0;
+          if(negate)
+            x = -x;
+          var possible = Math.pow(x, 1 / n);
+          n = Math.pow(possible, n);
+          if(Math.abs(x - n) < 1 && (x > 0 == n > 0))
+            return negate ? -possible : possible;
+        } catch(e){}
+      }
 // with(document){
 //   var name =prompt("First name pls");
 //   var lastName=prompt("Last name pls");
@@ -113,8 +124,8 @@ with(document){
 // write(`Minuty ${date.getMinutes()}<br>`);
 // write(`Sekundy ${date.getSeconds()}<br>`);
 // write(`Aktualna godzina ${patt.exec(date.toLocaleString())}<br><br>`);
-//
-//
+
+
 // write(`Adres url: ${document.location}<br>`);
 // write(`title: ${document.title}<br>`);
 //---------------------------------------------------------------------------------------------------------
@@ -139,10 +150,24 @@ with(document){
 // write(`arr1: ${arr1}<br>`);
 // write(`arr1.pop(): ${arr1.pop()}`);
 //----------------------------------------------------------------------------------------------------------
-var mies = ["Styczeń","Luty","Marzec","Kwiecień","Maj","Czerwiec","Lipiec","Sierpień","Wrzesień","Październik","Listopad","Grudzień"];
-var dtyg = ["Poniedziałek","Wtorek","Środa","Czwartek","Piątek","Sobota","Niedziela"];
-let date = new Date();
-var ndtyg = date.getDay()-1;
-var nmies = date.getMonth();
-write(`Dzisiejsza data to: ${dtyg[ndtyg]}, ${date.getDate()} ${mies[nmies]}, ${date.getFullYear()}`);
+// var mies = ["Styczeń","Luty","Marzec","Kwiecień","Maj","Czerwiec","Lipiec","Sierpień","Wrzesień","Październik","Listopad","Grudzień"];
+// var dtyg = ["Poniedziałek","Wtorek","Środa","Czwartek","Piątek","Sobota","Niedziela"];
+// let date = new Date();
+// var ndtyg = date.getDay()-1;
+// var nmies = date.getMonth();
+// write(`Dzisiejsza data to: ${dtyg[ndtyg]}, ${date.getDate()} ${mies[nmies]}, ${date.getFullYear()}`);
+//---------------------------------------------------------------------------------------------------------
+// const p = (a,b)=>(a-b)
+// var arr = [];
+// for(var i = 0;arr.length<100;i++){
+//     var x = Math.floor(Math.random()*100);
+//     while(arr.includes(x)==false){
+//         arr.push(x)
+//     }
+// }
+// console.log(`Unsorted ${arr}\nSorted ${arr.sort(p).reverse()}`);
+//------------------------------------------------------------------------------------------------------------
+
+
 }
+
