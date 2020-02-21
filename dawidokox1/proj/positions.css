@@ -1,0 +1,53 @@
+*{
+    overflow: hidden;
+}
+header{
+    width: 100vw;
+    height: 5vh;
+}
+img{
+    display:flex;
+    justify-content: space-evenly;
+}
+p{
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav{
+    width: 100vw;
+    height: 15vh;
+    display:flex;
+    justify-content: space-evenly;
+}
+button{
+    width: 30vw;
+    margin: 1px;
+}
+aside{
+    width: 100vw;
+    height: 15vh;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+fill{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+}
+main{
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer{
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
