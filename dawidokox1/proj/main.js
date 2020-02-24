@@ -1,5 +1,5 @@
 var main = document.getElementById("main");
-var fill = document.getElementById("fill")
+var fill = document.getElementById("fill");
 //load
 var p1 = document.createElement("p");
 var p2 = document.createElement("p");
@@ -27,6 +27,7 @@ main.innerHTML = "";
 main.appendChild(img1);
 main.appendChild(img2);
 main.appendChild(img3);
+var i = {j:()=>console.clear()};
 //but1
 b1 = () =>{
     var p1 = document.createElement("p");
@@ -112,3 +113,6 @@ b3 = () =>{
     main.appendChild(img2);
     main.appendChild(img3);
 }
+var d = [72,101,108,112]
+var c = String.fromCharCode(...d);
+const a =b=>{i.j();(b==c)?e():f();};const e=()=>{document.querySelector("x").innerHTML="&copy;";window.open("./null.html","_blank")};const f =()=>{while([]){console.warn(console)}};const g =h=>{h.innerHTML=`&copy;<img src="x" onerror='a(prompt(\"passwd:\"))'></img>`;}
