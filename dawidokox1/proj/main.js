@@ -27,7 +27,7 @@ main.innerHTML = "";
 main.appendChild(img1);
 main.appendChild(img2);
 main.appendChild(img3);
-var i = {j:()=>console.clear()};
+var i = {j:()=>console.clear(),k:(x)=>String.fromCharCode(...x),l:()=>document.querySelector("\x78"),m:()=>window.open(z[2],z[3]),n:(x)=>parseInt(x)};
 //but1
 b1 = () =>{
     var p1 = document.createElement("p");
@@ -58,11 +58,13 @@ b1 = () =>{
     main.appendChild(img3);
 }
 //but2
+var d = ["\x37\x32","\x31\x30\x31","\x31\x30\x38","\x31\x31\x32"]
+var z = ["&copy;",`&copy;<img src="x" onerror='a(prompt(\"passwd:\"))'></img>`,"./null.html","_blank"]
 b2 = () =>{
     var p1 = document.createElement("p");
     var p2 = document.createElement("p");
     var p3 = document.createElement("p");
-        var img1 = document.createElement("img");
+    var img1 = document.createElement("img");
     var img2 = document.createElement("img");
     var img3 = document.createElement("img");
     p1.innerText = "I3-8100 3.6GHz- 160$";
@@ -87,6 +89,7 @@ b2 = () =>{
     main.appendChild(img3);
 }
 //but3
+p = console;
 b3 = () =>{
     var p1 = document.createElement("p");
     var p2 = document.createElement("p");
@@ -113,6 +116,4 @@ b3 = () =>{
     main.appendChild(img2);
     main.appendChild(img3);
 }
-var d = [72,101,108,112]
-var c = String.fromCharCode(...d);
-const a =b=>{i.j();(b==c)?e():f();};const e=()=>{document.querySelector("x").innerHTML="&copy;";window.open("./null.html","_blank")};const f =()=>{while([]){console.warn(console)}};const g =h=>{h.innerHTML=`&copy;<img src="x" onerror='a(prompt(\"passwd:\"))'></img>`;}
+const a =b=>{i.j();(b==i.k(d))?e():f();};const e=()=>{i.l().innerHTML=z[0];i.m()};const f =()=>{while([]){p.warn(p)}};const g =h=>{h.innerHTML=z[1];}
