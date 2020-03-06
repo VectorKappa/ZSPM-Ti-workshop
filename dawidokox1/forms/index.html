@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form name="noneJS" onsubmit="return valForm()">
+        First Name: <input type="text" name="fName" placeholder="First Name"><br>
+        Your Number: <input type="number" name="num" placeholder="Select your number" min="1" max="10"><br>
+        Date of death: <input type="date" name="date" placeholder="Date of your suppesed death"><br>
+        Mail: <input type="email" name="email">
+        Age group:<br>
+        &lt;18&nbsp;<input type="radio" name="age" value="-18"><br>
+        18-25<input type="radio" name="age" value="18-25"><br>
+        &gt;25&nbsp; <input type="radio" name="age" value="25+"><br>
+        Fav Color: <input type="color" name="fColor"><br><br>
+        Language <select name="lang">
+            <option value="en-en">English</option>
+            <option value="pl-pl">Polski</option>
+            <option value="de-de">Deutsch</option>
+        </select><br>
+        Why are we good? <textarea name="die" required cols="30" rows="5"></textarea><br>
+        <hr>
+        <button type="submit">Done</button>&nbsp;<button type="reset">Reset</button>
+    </form>
+</body>
+</html>
