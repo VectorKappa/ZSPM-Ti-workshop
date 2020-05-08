@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const validate=()=>{
+            var f = document.forms["regex"];
+            var nameReg = /[a-z]{3,}/gi;
+            var mailReg = /^[\w\.]{1,}@[\w\.]{1,}\.{1}[a-z]{1,}$/gi;
+            (nameReg.test(f["name"].value)==false || nameReg.test(f["sname"].value==false))?alert("Name or/and surname is wrong"):(mailReg.test(f["mail"].value==false))?alert("Email is wrong"):alert("Validation passed");
+        }
+    </script>
+</head>
+<body>
+    <form name=regex>
+        First Name <input type="text" name="name">
+        Surname <input type="text" name="sname">
+        Email <input type="email" name="mail">
+        <button onclick="validate()">Validate</button>&nbsp;<button type="reset">Reset</button>
+    </form>
+</body>
+</html>

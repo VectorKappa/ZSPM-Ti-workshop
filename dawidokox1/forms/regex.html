@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const validate=()=>{
+            var f = document.forms["regex"];
+            var reg = /[a-z]{3,}/gi;
+            ((reg.exec(f["name"].value))!=f["name"].value || (reg.exec(f["sname"].value))!=f["sname"].value)?alert("err"):alert("Completed");
+        }
+    </script>
+</head>
+<body>
+    <form name=regex>
+        First Name <input type="text" name="name">
+        Surname <input type="text" name="sname">
+        <button onclick="validate()">Validate</button>
+    </form>
+</body>
+</html>

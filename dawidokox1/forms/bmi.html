@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const BMI = () =>{
+            var w = parseFloat(document.forms["bmi"]["Weight"].value)
+            var h = parseFloat(document.forms["bmi"]["Height"].value)
+            var bmi = w/(Math.pow((h/100),2));
+            (bmi < 18.5)?alert(`Niedowaga (BMI: ${bmi})`):(bmi >= 18.5 && bmi < 25)?alert(`Waga prawidłowa (BMI: ${bmi})`):(bmi >= 25 && bmi < 30)?alert(`Nadwaga (BMI: ${bmi})`):alert(`Otyłość (BMI: ${bmi})`)
+
+        }
+    </script>
+</head>
+<body>
+    <form name="bmi">
+        <input type="number" name="Weight" placeholder="w kg">
+        <input type="number" name="Height" placeholder="w cm"><br>
+        <button onclick="BMI()">Kalkuluj BMI</button>
+    </form>
+</body>
+</html>

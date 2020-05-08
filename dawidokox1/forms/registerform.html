@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const check=()=>{
+            var f = document.forms["help"];
+            var un = f["usr"].value;
+            var psw = f["pass"].value;
+            	//regex
+            var regun = /^[\w]{5,}$/;
+            var regpw = /^.*(?=[A-Z]{1,})\w{8,}$/;
+
+            (un!=regun.exec(un) || psw != regpw.exec(psw) || f["reg"].checked == false)?alert("You fucked up"):alert("passed");
+        }
+    </script>
+</head>
+<body>
+    <form name="help">
+    Nazwa Użytkownika   <input type="text" name="usr" required><br>
+    Hasło   <input type="password" name="pass" required><br>
+    <input type="checkbox" name="reg" required>   Zapoznałem/am się z regulaminem<br>
+    <input type="checkbox" name="news">   Chcę otrzymywać newsletter<br>
+    <button onclick="check()">Rejestruj</button></form>
+</body>
+</html>

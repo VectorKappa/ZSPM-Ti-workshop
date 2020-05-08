@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        Math.parity = (x)=>(x%2==0)?true:false;
+        const a = (x) {
+            (Math.parity(x)==true && x>=0)?alert("Liczba parzysta i dodatnia"):(Math.parity(x)==true && x<0)?alert("Liczba parzysta i ujemna"):(Math.parity(x)==false && x<0)?alert("Liczba nieparzysta i ujemna"):alert("Liczba nieparzysta i dodatnia")
+        }
+    </script>
+</head>
+<body>
+    <form name="b">
+        <input name="num" type="number">
+        <button onclick="a(document.forms['b']['num'].value)">send</button>
+    </form>
+</body>
+</html>

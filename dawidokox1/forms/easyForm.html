@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    const multiply = () =>{
+        var num1 = document.forms["test"]["num1"].value;
+        var num2 = document.forms["test"]["num2"].value;
+        document.write(`Wynik: ${num1*num2}`);
+        setTimeout(()=>window.location.reload(),3000)
+    }
+    const addition = () =>{
+        var num1 = document.forms["test"]["num1"].value;
+        var num2 = document.forms["test"]["num2"].value;
+        document.write(`Wynik: ${parseInt(num1)+parseInt(num2)}`);
+        setTimeout(()=>window.location.reload(),3000)    
+    }
+    </script>
+</head>
+<body>
+    <form name="test">
+        <input type="number" name="num1" placeholder="0">
+        <input type="number" name="num2" placeholder="0">
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="addition()">Add</button>
+    </form>
+</body>
+</html>

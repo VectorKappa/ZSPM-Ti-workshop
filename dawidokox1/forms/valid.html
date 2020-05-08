@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const validate = () =>{
+            var form = document.forms["form"];
+            (form["name"].value == "" || form["sname"].value == "")?alert("Validation failed due to empty input"):(form["name"].value.length < 3 || form["sname"].value.length < 3)?alert("Validation failed due to too short input"):alert("Validation successful");
+        }
+    </script>
+</head>
+<body>
+    <form name="form">
+        First Name <input type="text" name="name"><font color="red">*</font><br>
+        Surname <input type="text" name="sname"><font color="red">*</font><br>
+        Not important <input type="text" name="none"><br>
+        Not important either <input type="text" name="none2"><br>
+        <button onclick="validate()">Validate</button>
+    </form>
+</body>
+</html>

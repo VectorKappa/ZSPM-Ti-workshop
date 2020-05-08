@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const a = () =>{
+            (document.forms["b"]["amount"].value > 50 || document.forms["b"]["amount"].value < 1)?alert("Nie można więcej niż 50 lub mniej niż 1"):alert(document.forms["b"]["amount"].value*8 + "PLN");
+        }
+    </script>
+</head>
+<body>
+    8.00 PLN/szt.   
+    <form name="b">
+        Ilość <input name="amount" type="number" min="1" max="50" size="2" placeholder="1">
+        <button onclick="a()">Send</button>
+    </form>
+</body>
+</html>
