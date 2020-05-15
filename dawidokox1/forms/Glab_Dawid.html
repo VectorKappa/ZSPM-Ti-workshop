@@ -1,0 +1,47 @@
+<!-- Dawid Głąb -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const nxt =()=>{
+            var f = document.forms["zad2"];
+            alert(`Witaj ${f["fname"].value}`);
+            window.open("http://zspm.pl"); //window.location.href = "http://zspm.pl"; nie chce działać w chrome
+        }
+        const e2 = () =>{
+            var f = document.forms["zad2"];
+            (new Date().getFullYear()-f["year"].value < 18)?alert("Jesteś za młody"):nxt();
+        }
+        const testfor = () =>{
+            var f = document.forms["zad3"];
+            (f["fname"].value == "")?alert("Wystąpił błąd"):(document.getElementById("pod").checked == true || document.getElementById("sr").checked == true || document.getElementById("wyz").checked == true)?alert("Poprawnie wypełniono formularz"):alert("Wystąpił błąd");
+        }
+    </script>
+</head>
+<body>
+    <form name="zad1">
+        Imię: <input type="text" name="fname">
+        <button onclick='document.write(`Cześć ${document.forms["zad1"]["fname"].value}<br>Witaj na stronie. Aktualna godzina: ${/[0-9]{2}:[0-9]{2}:[0-9]{2}/.exec(new Date().toLocaleString())}`)'>Submit</button>
+    </form>
+    <br><hr><br>
+    <form name="zad2">
+        Imię: <input type="text" name="fname"> Podaj rok urodzenia: <input type="number" name="year"> <br>
+        <button onclick="e2()">Submit</button>  <button type="reset">Clear</button>
+    </form>
+    <br><hr><br>
+    Formularz kontaktowy <br>
+    <br>
+    <form name="zad3">
+        Podaj imię: <input type="text" name="fname"><br>
+        Wykształcenie: <br>
+        <input type="radio" name="w" id="pod"> Podstawowe <br>
+        <input type="radio" name="w" id="sr"> Średnie <br>
+        <input type="radio" name="w" id="wyz"> Wyższe <br>
+        <button onclick="testfor()">Sprawdź</button> <button type="reset">Wyczyść</button>
+    </form>
+</body>
+</html>

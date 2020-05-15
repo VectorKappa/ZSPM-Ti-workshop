@@ -7,8 +7,8 @@
     <title>Document</title>
     <script>
         Math.parity = (x)=>(x%2==0)?true:false;
-        const a = (x) {
-            (Math.parity(x)==true && x>=0)?alert("Liczba parzysta i dodatnia"):(Math.parity(x)==true && x<0)?alert("Liczba parzysta i ujemna"):(Math.parity(x)==false && x<0)?alert("Liczba nieparzysta i ujemna"):alert("Liczba nieparzysta i dodatnia")
+        const a = (x) => {
+            (isNaN(x)==true)?alert("Not a number"):(Math.parity(x)==true && x>=0)?alert("Liczba parzysta i dodatnia"):(Math.parity(x)==true && x<0)?alert("Liczba parzysta i ujemna"):(Math.parity(x)==false && x<0)?alert("Liczba nieparzysta i ujemna"):alert("Liczba nieparzysta i dodatnia");
         }
     </script>
 </head>
