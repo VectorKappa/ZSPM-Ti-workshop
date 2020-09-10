@@ -1,0 +1,19 @@
+html, body {
+    margin: 0;
+    font-family: Roboto;
+}
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    margin: 3px;
+}
+#right-pane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#feed, #sign-out {
+    margin: 0 6px;
+}
