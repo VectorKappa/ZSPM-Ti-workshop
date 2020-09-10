@@ -1,0 +1,3 @@
+<?php
+    readfile("profile.html");
+?>
