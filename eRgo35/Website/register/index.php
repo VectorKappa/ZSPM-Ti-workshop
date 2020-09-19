@@ -7,10 +7,10 @@
 
     $error = "";
 
-    if (isset($_POST['login'])) {
-
-        $email = $password = "";
+    if (isset($_POST['register'])) {
         
+        $name = $lastname = $email = $password = "";
+
         if (empty(trim($_POST['email'])) && empty(trim($_POST['password']))) {
             $error = "Please enter email and password.";
         }
@@ -20,39 +20,8 @@
         else if (empty(trim($_POST['password']))) {
             $error = "Please enter password";
         }
-        else {
-            $sql = 'SELECT id, password, name, last-name FROM users WHERE email = ?';
-            
-            if ($pre = $db->prepare($sql)) {
-                $pre->bind_param('s', $_POST['email']);
-                $pre->execute();
-                $pre->store_result();
-                if ($pre->num_rows > 0) {
-                    $pre->bind_result($id, $password, $name);
-                    $pre->fetch();
-                
-                    if (password_verify($_POST['password'], $password)) {
-                        session_regenerate_id();
-                        $_SESSION['loggedin'] = TRUE;
-                        $_SESSION['name'] = $name;
-                        $_SESSION['last-name'] = $last-name;
-                        $_SESSION['id'] = $id;
-                        header('Location: /');
-                    }
-                    else {
-                        $error = "Invalid email or password!";
-                    }
-                }
-                else {
-                    $error = "Invalid email or password!";
-                }
-            }
-            else {
-                $error = "Oops! Something went wrong. Please try again later.";
-            }
-            $pre->close();
-        }
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="../media/favicon.jpg"/>
     <link href="../libs/Ergo-Framework-1.0.2-min.css" rel="stylesheet">
-    <title>Log in - FoodBook</title>
+    <title>Register - FoodBook</title>
     <style>
         html, body {
             margin: 0;
@@ -143,12 +112,29 @@
             font-size: 1.2vw;
             padding: 0 15px;
         }
+        .user1 {
+            box-sizing: border-box;
+            width: 49%;
+            height: 100%;
+            border-radius: 10px;
+            border: 1px solid rgb(161, 161, 161);
+            outline: none;
+            font-size: 1.2vw;
+            padding: 0 15px;
+
+        }
         .user:focus {
             outline: none;
             border: 1px solid limegreen;
         }
-        .loginBtn {
+        #name-inputs {
             width: 90%;
+            height: 20%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .loginBtn {
             height: 20%;
             border-radius: 10px;
             background: limegreen;
@@ -157,6 +143,7 @@
             cursor: pointer;
             color: white;
             font-size: 1.2vw;
+            width: 60%;
             transition: background 0.2s ease-in-out;
         }
         .loginBtn:hover, .loginBtn:active {
@@ -172,7 +159,7 @@
         }
         .reg {
             background: rgb(61, 122, 236);
-            width: 60%;
+            width: 90%;
         }
         .reg:hover, .reg:active {
             background: rgb(52, 105, 202);
@@ -195,14 +182,19 @@
             </div>
             <div id="right-pane">
                 <div id="form-wrapper">
-                    <form action="/login/" method="POST">
+                    <form action="/register/" method="POST">
+                        <div id="name-inputs">
+                            <input class="user1" name="firstname" placeholder="First Name" type="text">
+                            <input class="user1" name="lastname" placeholder="Last Name" type="text">
+                        </div>  
                         <input class="user" name="email" placeholder="Email" type="email">
                         <input class="user" name="password" placeholder="Password" type="password">
-                        <button class="loginBtn" type="submit" name="login">Log In</button>
+                        <input class="user" name="password-confirm" placeholder="Confirm Password" type="password">
+                        <button class="loginBtn reg" type="submit" name="register">Register</button>
                         <span id="error"><?php echo $error ?></span>
                     </form>
                     <hr class="custom">
-                    <button class="loginBtn reg" onclick="window.location.href = '/register/';">Create New Account</button>
+                    <a href="/login/">I already have an account</button>
                 </div>
             </div>
         </div>

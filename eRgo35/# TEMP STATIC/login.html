@@ -1,59 +1,3 @@
-<?php
-    @require "../libs/auth.php";
-
-    if (isset($_SESSION['loggedin'])) {
-        header('Location: /');
-    }
-
-    $error = "";
-
-    if (isset($_POST['login'])) {
-
-        $email = $password = "";
-        
-        if (empty(trim($_POST['email'])) && empty(trim($_POST['password']))) {
-            $error = "Please enter email and password.";
-        }
-        else if(empty(trim($_POST['email']))) {
-            $error = "Please enter email.";
-        }
-        else if (empty(trim($_POST['password']))) {
-            $error = "Please enter password";
-        }
-        else {
-            $sql = 'SELECT id, password, name, last-name FROM users WHERE email = ?';
-            
-            if ($pre = $db->prepare($sql)) {
-                $pre->bind_param('s', $_POST['email']);
-                $pre->execute();
-                $pre->store_result();
-                if ($pre->num_rows > 0) {
-                    $pre->bind_result($id, $password, $name);
-                    $pre->fetch();
-                
-                    if (password_verify($_POST['password'], $password)) {
-                        session_regenerate_id();
-                        $_SESSION['loggedin'] = TRUE;
-                        $_SESSION['name'] = $name;
-                        $_SESSION['last-name'] = $last-name;
-                        $_SESSION['id'] = $id;
-                        header('Location: /');
-                    }
-                    else {
-                        $error = "Invalid email or password!";
-                    }
-                }
-                else {
-                    $error = "Invalid email or password!";
-                }
-            }
-            else {
-                $error = "Oops! Something went wrong. Please try again later.";
-            }
-            $pre->close();
-        }
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -198,8 +142,8 @@
                     <form action="/login/" method="POST">
                         <input class="user" name="email" placeholder="Email" type="email">
                         <input class="user" name="password" placeholder="Password" type="password">
-                        <button class="loginBtn" type="submit" name="login">Log In</button>
-                        <span id="error"><?php echo $error ?></span>
+                        <button class="loginBtn" type="submit" name="submitLogin">Log In</button>
+                        <span id="error"></span>
                     </form>
                     <hr class="custom">
                     <button class="loginBtn reg" onclick="window.location.href = '/register/';">Create New Account</button>
