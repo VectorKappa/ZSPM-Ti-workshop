@@ -1,4 +1,5 @@
 <?php
+
     @require "../libs/auth.php";
 
     if (isset($_SESSION['loggedin'])) {
@@ -21,21 +22,21 @@
             $error = "Please enter password";
         }
         else {
-            $sql = 'SELECT id, password, name, last-name FROM users WHERE email = ?';
+            $sql = 'SELECT id, password, name, lastname FROM users WHERE email = ?';
             
             if ($pre = $db->prepare($sql)) {
                 $pre->bind_param('s', $_POST['email']);
                 $pre->execute();
                 $pre->store_result();
                 if ($pre->num_rows > 0) {
-                    $pre->bind_result($id, $password, $name);
+                    $pre->bind_result($id, $password, $name, $lastname);
                     $pre->fetch();
                 
                     if (password_verify($_POST['password'], $password)) {
                         session_regenerate_id();
                         $_SESSION['loggedin'] = TRUE;
                         $_SESSION['name'] = $name;
-                        $_SESSION['last-name'] = $last-name;
+                        $_SESSION['lastname'] = $lastname;
                         $_SESSION['id'] = $id;
                         header('Location: /');
                     }
