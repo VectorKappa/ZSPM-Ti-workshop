@@ -44,4 +44,8 @@ for($i=0;$i<5;$i++){
 }
 echo "</table>";
 
+function rabat($am, $pr){
+    return $am-($am*($pr/100));
+}
+print(rabat(10, 5));
 ?>
