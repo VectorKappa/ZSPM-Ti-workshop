@@ -168,5 +168,4 @@ with(document){
 // console.log(arr.reduce((a)=>a*2))
 //console.log(`Unsorted ${arr}\nSorted ${arr.sort((a,b)=>(a-b)).reverse()}`);
 //------------------------------------------------------------------------------------------------------------
-
 }
