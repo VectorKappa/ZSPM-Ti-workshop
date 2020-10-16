@@ -1,5 +1,12 @@
 <?php 
-    
+    $people = [
+        ["name" => "Martha Jones", "occupation" => "Recepionist", "phone" => "202-555-0125", "email" => "marthajones@undefined.com", "website" => "www.jonesconsulting.com", "address" => "564 Kildeer Drive", "address_more" => "Boynton Beach, Florida, USA"],
+        ["name" => "Joe N Warner", "occupation" => "Senior Web Developer", "phone" => "202-555-5323", "email" => "joewarner@undefined.com", "website" => "www.joewarner.com", "address" => "3938 Beech Street", "address_more" => "Walnut Creek, California, USA"],
+        ["name" => "Jackie Kent", "occupation" => "Project Manager", "phone" => "202-555-5431", "email" => "jackiekent@undefined.com", "website" => "www.kentmanagement.com", "address" => "445 Metz Lane", "address_more" => "Woburn, Massachusetts, USA"],
+        ["name" => "Jean Handy", "occupation" => "Junior Web Developer", "phone" => "202-555-6324", "email" => "jeanhandy@undefined.com", "website" => "www.jhandy.com", "address" => "2896 Hickory Heights Drive", "address_more" => "Baltimore, Maryland, USA"],
+        ["name" => "Edna Huerta", "occupation" => "Accountant", "phone" => "202-555-5234", "email" => "ednahuerta@undefined.com", "website" => "www.ednahuerta.com", "address" => "2615 Everette Alley", "address_more" => "Mohler, Washington, USA"]
+    ];
+    $x = rand(0, 4);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,21 +87,21 @@
                 <img class="logo" src="img/logo.png">
             </div>
             <div id="details">
-                <div class="name">{{ name }}</div>
-                <div class="occupation">{{ occupation }}</div>
+                <div class="name"><?php echo $people[$x]["name"];?></div>
+                <div class="occupation"><?php echo $people[$x]["occupation"];?></div>
             </div>
             <div id="details2">
-                <div id="phone">Phone: {{ telephone }}}</div>
-                <div id="email">Email: {{ email }}</div>
-                <div id="website">Website: {{ website }}</div>
+                <div id="phone">Phone: <?php echo $people[$x]["phone"];?></div>
+                <div id="email">Email: <?php echo $people[$x]["email"];?></div>
+                <div id="website">Website: <?php echo $people[$x]["website"];?></div>
             </div>
             <div id="details3">
-                <div id="address">{{ office_address }}</div>
-                <div id="address-more">{{ address_city }}</div>
+                <div id="address"><?php echo $people[$x]["address"];?></div>
+                <div id="address-more"><?php echo $people[$x]["address_more"];?></div>
             </div>
         </div>
         <div id="img">
-            <img class="face" src="img/person_1.jfif">
+            <img class="face" src="img/person_<?php echo $x+1; ?>.jfif">
         </div>
     </div>
 </body>

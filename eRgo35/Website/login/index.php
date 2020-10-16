@@ -1,5 +1,4 @@
 <?php
-
     @require "../libs/auth.php";
 
     if (isset($_SESSION['loggedin'])) {
