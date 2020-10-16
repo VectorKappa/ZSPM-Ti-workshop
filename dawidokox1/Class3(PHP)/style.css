@@ -1,0 +1,33 @@
+body{
+    background-color: aqua;
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+table{
+    background-color:white;
+    border:1px solid white;
+    border-collapse: collapse;
+    width: 60vw;
+    height: 40vh;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+tr{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width: 60vw;
+    height: 10vh;
+    border:1px solid black;
+}
+td{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width: 33%;
+    height: 33%;
+}
