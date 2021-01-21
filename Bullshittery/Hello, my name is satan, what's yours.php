@@ -7,7 +7,7 @@ $znaki = "a"; $a = "b"; $b = "c"; $c = "d"; $d = "e"; $e = "f"; $f = "g"; $g = "
 $HelloWorld = $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$znaki . $$$$$znaki . $$$$$$$$$$$$znaki . $$$$$$$$$$$$znaki . $$$$$$$$$$$$$$$znaki . $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$znaki . $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$znaki . $$$$$$$$$$$$$$$znaki . $$$$$$$$$$$$$$$$$$znaki .  $$$$$$$$$$$$znaki . $$$$znaki;
 array_push($arr2, $HelloWorld);
 echo end($arr);
-print("<script>eval(atob('YWxlcnQoIkhlbHAgbWUiKTs='))</script>");
+print("<script>eval(window.atob('YWxlcnQoIkhlbHAgbWUiKTs='))</script>");
 
 $doc = new DOMDocument();
 $body=$doc->getElementById("Main");
