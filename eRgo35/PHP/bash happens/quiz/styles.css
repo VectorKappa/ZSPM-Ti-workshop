@@ -1,0 +1,137 @@
+html,
+body {
+    margin: 0;
+    border: 0;
+    min-height: 100%;
+    background: #076d63;
+    color: white;
+    font-family: Roboto;
+    font-size: 3vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0a3f3a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #083b36;
+}
+
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.6rem;
+    margin: 40px;
+}
+
+h1 {
+    z-index: 10;
+    font-size: 5rem;
+    margin: 10vh 0 0 10vh;
+    -webkit-text-stroke: 0.1px #095049;
+}
+
+.questions {
+    margin: 30px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 0.5;
+}
+
+.ans {
+    font-size: 0.8rem;
+}
+
+.selected {
+    background-color: #bd1717;
+}
+
+.correct {
+    background-color: green;
+}
+
+.question-block {
+    margin: 25px 25px;
+    background: #0b8175;
+    border-radius: 20px;
+    padding: 20px 40px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.answer-block {
+    margin: 0;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
+form {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+label {
+    cursor: pointer;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: white;
+    padding: 7px 18px;
+    border-radius: 7px;
+    color: #0b8175;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.warn {
+    color: red;
+    transition: 0.2s all ease-in-out;
+}
+
+.warn:hover {
+    color: white;
+    background: #bd1717;
+    cursor: not-allowed;
+}

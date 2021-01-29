@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            outline: 1px solid red;
+        }
+        html, body {
+            font-family: Roboto;
+            margin: 0px;
+        }
+        #scrolling-box {
+            line-height: 25px;
+            height: 25px;
+            font-weight: 500;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        #scrolling-text {
+            display: inline-block;
+            width: max-content;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+        #header {
+            height: 86px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #title {
+            font-size: 48px;
+        }
+        #content {
+            height: calc(100vh - 86px - 25px);
+        }
+        #products {
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #product {
+            width: 18vw;
+            height: 18vw;
+            margin: 20px;
+        }
+        #submenu {
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #more {
+            width: calc(36vw + 40px);
+            height: 100%;
+            margin: 20px;
+        }
+        #button-wrapper {
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            font-size: 25px;
+        }
+        #footer {
+            height: 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+    </style>
+</head>
+<body>
+    <div id="scrolling-box">
+        <div id="scrolling-text">THIS IS TEXT IS TO SHOW YOU THAT I STILL REMEMBER HOW TO WRTIE CSS ANIMATIONS</div>
+    </div>
+    <div id="header">
+        <div id="title">Placeholder™</div>
+    </div>
+    <div id="content">
+        <div id="products">
+            <div id="product"></div>
+            <div id="product"></div>
+            <div id="product"></div>
+            <div id="product"></div>
+        </div>
+        <div id="submenu">
+            <div id="more"></div>
+            <div id="more"></div>
+        </div>
+        <div id="button-wrapper">
+            <button>SHUT UP AND TAKE MY MONEY</button>
+        </div>
+    </div>
+    <div id="footer">
+        <span>&copy;2021 Michał Czyż</span>
+        <span>All Rights Reserved</span>
+    </div>
+</body>
+</html>

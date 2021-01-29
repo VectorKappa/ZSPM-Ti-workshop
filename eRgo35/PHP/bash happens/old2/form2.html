@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularz</title>
+</head>
+<body>
+<form action="form3.php" method="POST">
+<h3> KWESTIONARIUSZ OSOBOWY</h3>
+<h6>Imię:<br></h6>
+<input type="text" name="imie"><br>
+<h6>Nazwisko:<br></h6>
+<input type="text" name="nazw"><br>
+<h6>Wiek:<br></h6>
+<input type="number" name="wiek" min="18" max="100"><br>
+<h6>E-mail:<br></h6>
+<input type="email" name="mail"><br>
+
+<h6>Płeć:<br></h6>
+<input type="radio" name="plec" value="kobieta"> KOBIETA <br>
+<input type="radio" name="plec" value="mężczyzna"> MĘŻCZYZNA <br>
+<input type="radio" name="plec" value="helikopterbojowy"> HELIKOPTER BOJOWY <br>
+<h6>Numer pracownika:<br></h6>
+<input type="text" name="numer" size="8"><br>
+
+
+<h6>Specjalizacja: </h6>
+<select name="spec[]" id="spec" multiple>
+<option value="js">JavaScript</option>
+<option value="php">PHP</option>
+<option value="csharp">C#</option>
+</select>
+
+<h6>Dołącz plik: </h6>
+<input type="file" name="plik">
+
+<h6>Newsletter</h6>
+<input name="news" type="checkbox">Zasubskrybuj do newslettera ;p
+
+<input type="submit" value="wyślij">
+<input type="reset" value="reset">
+</form>
+</body>
+</html>
